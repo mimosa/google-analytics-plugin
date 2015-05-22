@@ -21,21 +21,20 @@
       </feature>
     </config-file>
 
-    <header-file src="ios/UniversalAnalyticsPlugin.h" />
-    <source-file src="ios/UniversalAnalyticsPlugin.m" />
-
-    <source-file src="ios/libGoogleAnalyticsServices.a" framework="true" />
-    <source-file src="ios/libAdIdAccess.a" framework="true" />
-    <header-file src="ios/GAIDictionaryBuilder.h" />
-    <header-file src="ios/GAIFields.h" />
-    <header-file src="ios/GAILogger.h" />
-    <header-file src="ios/GAITrackedViewController.h" />
-    <header-file src="ios/GAI.h" />
-    <header-file src="ios/GAITracker.h" />
-    <header-file src="ios/GAIEcommerceFields.h" />
-    <header-file src="ios/GAIEcommerceProduct.h" />
-    <header-file src="ios/GAIEcommerceProductAction.h" />
-    <header-file src="ios/GAIEcommercePromotion.h" />
+    <header-file src="src/ios/UniversalAnalyticsPlugin.h" />
+    <source-file src="src/ios/UniversalAnalyticsPlugin.m" />
+    <source-file src="src/ios/libGoogleAnalyticsServices.a" framework="true" />
+    <source-file src="src/ios/libAdIdAccess.a" framework="true" />
+    <header-file src="src/ios/GAIDictionaryBuilder.h" />
+    <header-file src="src/ios/GAIFields.h" />
+    <header-file src="src/ios/GAILogger.h" />
+    <header-file src="src/ios/GAITrackedViewController.h" />
+    <header-file src="src/ios/GAI.h" />
+    <header-file src="src/ios/GAITracker.h" />
+    <header-file src="src/ios/GAIEcommerceFields.h" />
+    <header-file src="src/ios/GAIEcommerceProduct.h" />
+    <header-file src="src/ios/GAIEcommerceProductAction.h" />
+    <header-file src="src/ios/GAIEcommercePromotion.h" />
 
 
     <framework src="SystemConfiguration.framework" />
@@ -46,6 +45,8 @@
   </platform>
 
   <platform name="android">
+    <framework src="com.google.android.gms:play-services-analytics:7.3.0" />
+
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="UniversalAnalytics">
         <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
@@ -64,6 +65,6 @@
         </intent-filter>
       </receiver>
     </config-file>
-    <source-file src="android/UniversalAnalyticsPlugin.java" target-dir="src/com/danielcwilson/plugins/analytics" />
+    <source-file src="src/android/UniversalAnalyticsPlugin.java" target-dir="src/com/danielcwilson/plugins/analytics" />
   </platform>
 </plugin>

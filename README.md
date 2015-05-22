@@ -69,13 +69,6 @@ You also will need to manually add the Google Analytics SDK files:
 * For iOS, add the downloaded Google Analytics SDK header files and libraries according to the [Getting Started](https://developers.google.com/analytics/devguides/collection/ios/v3) documentation
 * For Android, add `libGoogleAnalyticsServices.jar` to your Cordova Android project's `/libs` directory and build path
 
-#Integrating with Lavaca
-The `lavaca` directory includes a component that can be added to a <a href="http://getlavaca.com">Lavaca</a> project.  It offers a way to use the web `analytics.js` when the app is running in the browser and not packaged as Cordova.
-
-* Copy `AnalyticsService.js` to your Lavaca project (I create a directory under `js/app` called `data`).
-* In your config files (`local.json`, `staging.json`, `production.js`) create properties called `google_analytics_id` (for the Mobile App UA property) and `google_analytics_web_id` (for the Web UA property) and set the appropriate IDs or leave blank as needed.
-* In any file you want to track screen views or events, require AnalyticsService and use the methods provided.
-
 ```javascript
 var analyticsService = require('app/data/AnalyticsService');
 
